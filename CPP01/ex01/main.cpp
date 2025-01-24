@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 19:52:55 by jceron-g          #+#    #+#             */
-/*   Updated: 2025/01/24 20:12:59 by jceron-g         ###   ########.fr       */
+/*   Updated: 2025/01/24 20:23:48 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ int main(void)
     horde = zombieHorde(N, "Jose");
     for(int i = 0; i < N; i++)
         horde[i].announce();
-    delete horde;
+    delete[] horde;
 }
