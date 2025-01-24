@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 12:49:11 by jceron-g          #+#    #+#             */
-/*   Updated: 2025/01/22 15:59:16 by jceron-g         ###   ########.fr       */
+/*   Updated: 2025/01/23 11:00:06 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 Contact::Contact(void)
 {
-	std::cout << "Contact constructor called" << std::endl;
+	return ;
 }
 
 Contact::~Contact(void)
 {
-	std::cout << "Contact destructor called" << std::endl;
+	return ;
 }
 
 std::string Contact :: getName()
