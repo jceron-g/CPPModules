@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 12:49:09 by jceron-g          #+#    #+#             */
-/*   Updated: 2025/01/24 10:49:28 by jceron-g         ###   ########.fr       */
+/*   Updated: 2025/01/27 10:29:23 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,7 @@ void PhoneBook::addContact()
 		std::cout << "Please write a last name." << std::endl;
 		std::getline(std::cin, input);
 		if (std::cin.eof() || !std::cin.good())
-		{
 			return;
-		}
 	}
 	contact.setLastName(input);
 	input.clear();
@@ -56,9 +54,7 @@ void PhoneBook::addContact()
 		std::cout << "Please write a phone number." << std::endl;
 		std::getline(std::cin, input);
 		if (std::cin.eof() || !std::cin.good())
-		{
 			return;
-		}
 	}
 	contact.setPhoneNumber(input);
 	input.clear();
@@ -68,9 +64,7 @@ void PhoneBook::addContact()
 		std::cout << "Please write a nickname." << std::endl;
 		std::getline(std::cin, input);
 		if (std::cin.eof() || !std::cin.good())
-		{
 			return;
-		}
 	}
 	contact.setNickName(input);
 	input.clear();
@@ -80,9 +74,7 @@ void PhoneBook::addContact()
 		std::cout << "Please write your darkest secrets." << std::endl;
 		std::getline(std::cin, input);
 		if (std::cin.eof() || !std::cin.good())
-		{
 			return;
-		}
 	}
 	contact.setSecretWord(input);
 	contacts[currentIndex] = contact;
