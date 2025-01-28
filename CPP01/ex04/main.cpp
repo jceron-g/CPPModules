@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 16:20:57 by jceron-g          #+#    #+#             */
-/*   Updated: 2025/01/27 18:41:28 by jceron-g         ###   ########.fr       */
+/*   Updated: 2025/01/28 11:32:11 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int	main(int argc, char **argv)
 	std::ofstream outputFile(outputFilename.c_str());
 	if (!outputFile)
 	{
-		std::cerr << "Error: Unable to open file " << outputFilename << " for writing.\n";
+		std::cout << "Error: Unable to open file " << outputFilename << " for writing.\n";
 		return (1);
 	}
 	std::string line;
