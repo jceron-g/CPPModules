@@ -6,12 +6,12 @@
 #    By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/22 12:50:43 by jceron-g          #+#    #+#              #
-#    Updated: 2025/01/28 11:46:12 by jceron-g         ###   ########.fr        #
+#    Updated: 2025/02/03 17:40:05 by jceron-g         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME = harl
+NAME = harlFilter
 CC = c++
 CFLAGS = -Wextra -Wall -Werror -std=c++98
 
