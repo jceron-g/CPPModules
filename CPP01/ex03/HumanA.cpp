@@ -6,16 +6,11 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 11:04:00 by jceron-g          #+#    #+#             */
-/*   Updated: 2025/01/27 16:16:23 by jceron-g         ###   ########.fr       */
+/*   Updated: 2025/02/04 17:21:59 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
-
-// HumanA::HumanA()
-// {
-// 	return ;
-// }
 
 HumanA::HumanA(std::string name, Weapon &weapon) : weapon(weapon)
 {
