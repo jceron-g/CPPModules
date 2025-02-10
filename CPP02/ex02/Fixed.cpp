@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 10:49:36 by jceron-g          #+#    #+#             */
-/*   Updated: 2025/02/06 15:54:00 by jceron-g         ###   ########.fr       */
+/*   Updated: 2025/02/10 17:40:50 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,12 +75,86 @@ Fixed &Fixed :: operator=(const Fixed &fix)
 	
 }
 
+/*OPERADORES ARITMETICOS*/
+
 Fixed Fixed :: operator*(const Fixed &fix) const
 {
 	Fixed result;
 	result.setRawBits((this->number * fix.number) >> bits);
 	return (result);
 }
+
+Fixed Fixed :: operator+(const Fixed &fix) const
+{
+	Fixed result;
+	result.setRawBits((this->number + fix.number));
+	return (result);
+}
+
+Fixed Fixed :: operator-(const Fixed &fix) const
+{
+	Fixed result;
+	result.setRawBits((this->number - fix.number));
+	return (result);
+}
+
+Fixed Fixed :: operator/(const Fixed &fix) const
+{
+	if (fix.number == 0)
+	{
+		std::cout << "Impossible divide by zero." << std::endl;
+		return(0);
+	}
+	Fixed result;
+	result.setRawBits(((this->number << bits)/ fix.number));
+	return (result);
+}
+
+/*OPERADORES BOOLEANOS*/
+
+bool Fixed :: operator>(const Fixed &fix)const
+{
+	if(this->getRawBits() > fix.getRawBits())
+		return(true);
+	return(false);
+}
+
+bool Fixed :: operator<(const Fixed &fix)const
+{
+	if(this->getRawBits() < fix.getRawBits())
+		return(true);
+	return(false);
+}
+
+bool Fixed :: operator>=(const Fixed &fix)const
+{
+	if(this->getRawBits() >= fix.getRawBits())
+		return(true);
+	return(false);
+}
+
+bool Fixed :: operator<=(const Fixed &fix)const
+{
+	if(this->getRawBits() <= fix.getRawBits())
+		return(true);
+	return(false);
+}
+
+bool Fixed :: operator==(const Fixed &fix)const
+{
+	if(this->getRawBits() == fix.getRawBits())
+		return(true);
+	return(false);
+}
+
+bool Fixed :: operator!=(const Fixed &fix)const
+{
+	if(this->getRawBits() != fix.getRawBits())
+		return(true);
+	return(false);
+}
+
+/*OPERADORES DE INCREMENTO/DECREMENTO*/
 
 std::ostream &operator <<(std::ostream &out, const Fixed &fix)
 {

@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 10:49:44 by jceron-g          #+#    #+#             */
-/*   Updated: 2025/02/06 15:28:02 by jceron-g         ###   ########.fr       */
+/*   Updated: 2025/02/10 17:39:42 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int main( void ) 
 {
 	Fixed a;
-	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
+	Fixed const b(Fixed(5.05f) - Fixed(2));
 	//std::cout << a << std::endl;
 	// std::cout << ++a << std::endl;
 	//std::cout << a << std::endl;
