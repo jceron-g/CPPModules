@@ -6,11 +6,13 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 10:49:36 by jceron-g          #+#    #+#             */
-/*   Updated: 2025/02/06 10:46:08 by jceron-g         ###   ########.fr       */
+/*   Updated: 2025/02/06 15:54:00 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+
+/* CONSTRUCTORES Y DESTRUCTORES*/
 
 Fixed::Fixed() : number(0)
 {
@@ -40,6 +42,8 @@ Fixed::~Fixed()
 	std::cout << "Destructor called" << std::endl;
 }
 
+/* METODOS DE LA CLASE*/
+
 int Fixed::toInt() const
 {
 	return (this->number >> bits);
@@ -61,6 +65,7 @@ void Fixed :: setRawBits(int const raw)
 	this->number = raw;
 }
 
+/*SOBRECARGA DE OPERADORES*/
 Fixed &Fixed :: operator=(const Fixed &fix)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
@@ -70,8 +75,15 @@ Fixed &Fixed :: operator=(const Fixed &fix)
 	
 }
 
+Fixed Fixed :: operator*(const Fixed &fix) const
+{
+	Fixed result;
+	result.setRawBits((this->number * fix.number) >> bits);
+	return (result);
+}
+
 std::ostream &operator <<(std::ostream &out, const Fixed &fix)
 {
 	out << fix.toFloat();
-	return(out);
+	return (out);
 }
