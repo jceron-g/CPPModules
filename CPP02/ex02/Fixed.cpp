@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 10:49:36 by jceron-g          #+#    #+#             */
-/*   Updated: 2025/02/11 11:07:55 by jceron-g         ###   ########.fr       */
+/*   Updated: 2025/02/11 11:17:12 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,30 +16,25 @@
 
 Fixed::Fixed() : number(0)
 {
-	//std::cout << "Default constructor called" << std::endl;
 }
 
 Fixed::Fixed(const Fixed &fix)
 {
-	//std::cout << "Copy constructor called" << std::endl;
 	this->number = fix.number;
 }
 
 
 Fixed :: Fixed(const int number) : number(number << bits)
-{
-	//std::cout << "Int constructor called" << std::endl;	
+{	
 }
 
 Fixed :: Fixed (const float number)
 {
-	//std::cout << "Float constructor called" << std::endl;
 	this->number = roundf(number * (1 << bits));
 }
 
 Fixed::~Fixed()
 {
-	//std::cout << "Destructor called" << std::endl;
 }
 
 /* METODOS DE LA CLASE*/
@@ -56,7 +51,6 @@ float Fixed::toFloat() const
 
 int	Fixed :: getRawBits(void) const
 {
-	//std::cout << "getRawBits member function called" << std::endl;
 	return (this->number);
 }
 
@@ -68,7 +62,6 @@ void Fixed :: setRawBits(int const raw)
 /*SOBRECARGA DE OPERADORES*/
 Fixed &Fixed :: operator=(const Fixed &fix)
 {
-	//std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &fix)
 		this->number = fix.number;
 	return (*this);
